@@ -16,7 +16,7 @@ main:after{
     position: fixed;
     top: 0;
     left: 0;
-    background-color: linear-gradient(90deg, rgba(0,0,0,1) 10%, rgba(0,0,0,0.05926120448179273) 50%, rgba(0,0,0,0.1) 90%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.884) 10%, rgba(0, 0, 0, 0.05926120448179273) 50%, rgba(0, 0, 0, 0.884) 90%);
     z-index: -1;
 }
 
@@ -97,14 +97,23 @@ main:after{
     height: 100vh;
     object-fit: cover;
     display: none;
-    animation: mudarImagem 0.7s;
+    animation: mudar 0.7s;
 }
 
 .carrossel .carrossel__imagem.ativa{
     display: block;
 }
 
-@keyframes mudarImagem {
+.conteudo__informacoes .informacoes__descricao{
+    display: none;
+    animation: mudar 0.7s;
+}
+
+.conteudo__informacoes .informacoes__descricao.mostra{
+    display: block;
+}
+
+@keyframes mudar {
     from{
         opacity: 0.85;
     }
